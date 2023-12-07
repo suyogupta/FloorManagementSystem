@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en",xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="" th:href="@{/css/save.css}">
+    <title>Floor Plan Management System</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <h2>Floor Plan Form</h2>
+
+    <form action="#" th:action="@{/saveRoom}" th:object="${room}" method="post">
+    <label for="id">Room No:</label>
+    <input type="text" id="id" name="id" th:field="*{id}" required>
+    <label for="status">Status:</label>
+    <input type="radio" id = "status" name="status" value="1" required="required" /> Available
+    <input type="radio" id = "status" name="status" value="0" required="required" /> Unavailable
+    <label for="capacity">Capacity:</label>
+    <input type="number" id="capacity" name="capacity" th:field="*{capacity}" required>
+    <button type="submit">Save</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en",xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="" th:href="@{/css/home.css}">
+    <title>Floor Plan Management System</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <h1 th:text="${name}"></h1>
+    <a th:href="@{/save}"><button>Save Info</button></a>
+    <a th:href="@{/room}"><button>Get Room</button></a>
+</body>
+</html>

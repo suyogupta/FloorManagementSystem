@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en",xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="" th:href="@{/css/login.css}">
+    <title>Floor Plan Management System</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <form action="#" th:action="@{/login}" th:object="${user}" method="post">
+        <label for="id">User Id:</label>
+        <input type="text" id="id" name="id" th:field="*{id}" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" th:field="*{password}" required>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>

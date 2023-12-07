@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en",xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="" th:href="@{/css/room.css}">
+    <title>Floor Plan Management System</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <form action="#" th:action="@{/book}" th:object="${booking}" method="post" >
+        <label for="num">Capacity Needed:</label>
+        <input type="number" id="num" name="num" th:field="*{num}" required>
+        <button type="submit">Book Room</button>
+    </form>
+</body>
+</html>
